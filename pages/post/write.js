@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRef, useState } from 'react';
 import Layout from '../../components/Layout';
 
-export default function write() {
+export default function Write() {
   const idRef = useRef(undefined);
   const titleRef = useRef(undefined);
   const contentRef = useRef(undefined);
