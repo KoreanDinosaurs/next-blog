@@ -14,7 +14,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, preview }) {
+  console.log(`>>>>>>> ${preview}`);
   const postData = await getPostData(params.id);
   return {
     props: {
@@ -41,7 +42,7 @@ const components = {
 
 export default function Post({ postData }) {
   const router = useRouter();
-  console.log(postData);
+  // console.log(postData);
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
